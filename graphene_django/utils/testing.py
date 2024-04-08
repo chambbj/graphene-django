@@ -56,9 +56,10 @@ def graphql_query(
         else:
             body["variables"] = {"input": input_data}
     if headers:
-        header_params = (
-            {"headers": headers} if _DJANGO_VERSION_AT_LEAST_4_2 else headers
-        )
+        # header_params = (
+        #    {"headers": headers} if _DJANGO_VERSION_AT_LEAST_4_2 else headers
+        #)
+        header_params = headers
         print(headers)
         print(header_params)
         print(_DJANGO_VERSION_AT_LEAST_4_2)
